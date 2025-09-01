@@ -6,6 +6,12 @@
 
 このプロジェクトは、HTML、CSS（Tailwind CSS）、およびJavaScriptを使用して作成されています。ユーザーは表示されるテキストやロゴの数をカスタマイズでき、設定パネルの表示/非表示も切り替え可能です。
 
+## 📁 ファイル構成
+
+* `index.html` - メインのHTMLファイル
+* `style.css` - スタイルシート
+* `script.js` - JavaScriptロジック
+
 ## ✨ 特徴
 
 * **カスタマイズ可能なテキスト**: スクリーンセーバーに表示されるテキストを自由に変更できます。
@@ -42,7 +48,7 @@ you-sk/dvd-screen-saver
 
 コードを直接編集することで、さらに詳細なカスタマイズが可能です。
 
-* **色**: `script` タグ内の `colors` 配列を編集することで、ロゴが変化する色のリストを変更できます。
+* **色**: `script.js` 内の `colors` 配列を編集することで、ロゴが変化する色のリストを変更できます。
     ```javascript
     const colors = [
         '#FF0000', // 赤
@@ -50,13 +56,13 @@ you-sk/dvd-screen-saver
         // ...他の色
     ];
     ```
-* **ロゴの初期速度**: `createLogo` 関数内の `dx` および `dy` の計算ロジックを変更することで、ロゴの移動速度の範囲を調整できます。
+* **ロゴの初期速度**: `script.js` の `createLogo` 関数内の `dx` および `dy` の計算ロジックを変更することで、ロゴの移動速度の範囲を調整できます。
     ```javascript
     // function createLogo(text) 内
     dx: (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 1.5 + 1), // 1から2.5のランダムな速度
     dy: (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 1.5 + 1),
     ```
-* **フォントサイズ**: CSSの `.logo` クラス内の `font-size` プロパティを変更することで、ロゴの基本サイズを調整できます（現在はビューポート幅の3% `3vw` に設定されています）。
+* **フォントサイズ**: `style.css` の `.logo` クラス内の `font-size` プロパティを変更することで、ロゴの基本サイズを調整できます（現在はビューポート幅の3% `3vw` に設定されています）。
 
 ## 🖼️ デモ
 https://you-sk.github.io/dvd-screen-saver/
